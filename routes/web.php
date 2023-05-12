@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -45,3 +46,13 @@ Route::get('/categories/{category:slug}', function(Category $category){
     ]);
 });
 
+
+Route::get('/authors/{user:username}', function(User $user) {
+
+    return view('posts', [
+        'title' => 'User Posts',
+        'posts' => $user->posts
+       
+    ]);
+
+});
