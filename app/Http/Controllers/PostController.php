@@ -20,7 +20,7 @@ class PostController extends Controller
             'active' => 'posts',
             // 'posts' => Post::all()
             // 'posts' => Post::latest()->get()
-            'posts' => $posts->get()
+            'posts' => $posts ->get()
         ]);
     }
 
