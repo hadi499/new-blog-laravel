@@ -15,7 +15,7 @@ class PostController extends Controller
             'active' => 'posts',
             // 'posts' => Post::all()
             // 'posts' => Post::latest()->get()
-            'posts' => Post::latest()->filter()->get()
+            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->get()
         ]);
     }
 
