@@ -44,7 +44,7 @@ Route::get('/categories', function(){
 Route::get('/categories/{category:slug}', function(Category $category){
     return view('posts', [
         'title' => "Post by category : $category->name",
-        'active' => '',
+        'active' => 'posts',
         'posts' => $category->posts //satu category mempunyai banyak posts
       
     ]);
@@ -55,7 +55,7 @@ Route::get('/authors/{author:username}', function(User $author) {
 
     return view('posts', [
         'title' => "Post by author : $author->name",
-        'active' => '',
+        'active' => 'posts',
         'posts' => $author->posts
        
     ]);
