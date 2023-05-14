@@ -3,10 +3,10 @@
 @section('content')
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <h3 class="text-center ">{{$title}}</h3>
-        <div class="row my-3 justify-content-center">
+        <h3 class="text-center mb-4">{{$title}}</h3>
+        <div class="row justify-content-center">
             <div class="col-md-6">
-                <form action="/posts">                
+                <form action="/posts" >                
                     @if (request('category'))
                         <input type="hidden" name="category" value="{{ request('category') }}">
                     @endif
@@ -34,6 +34,9 @@
             <p class="text-center fs-4">no post found.</p>
         @endif
     </div>
+</div>
+<div class="d-flex justify-content-center">
+    {{ $posts->links() }}
 </div>
   
 @endsection
