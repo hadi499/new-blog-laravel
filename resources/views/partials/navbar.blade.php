@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link {{ ($active ==="home") ? 'active' : '' }}"href="/">Home</a>
           </li>
@@ -21,9 +21,9 @@
           
         </ul>       
        
-          <ul class="navbar-nav ">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/posts/create">Write</a>
+              <a class="nav-link {{ ($active ==="login") ? 'active' : '' }}" href="/login">Login</a>
             </li>
           </ul>
  
